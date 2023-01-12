@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Inter";
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format(truetype);
+}
+p {
+    max-inline-size: 55ch;
+    opacity: 0.7;
+    line-height: 1.2;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+}
+body {
+    padding: 7em;
+}
+.btn {
+    color: #fff;
+    text-decoration: none;
+    background-color: hsl(5, 85%, 63%);
+    padding: 1em 2em;
+    display: block;
+    width: fit-content;
+    letter-spacing: 2px;
+}
+
+/* Start */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo {
+    width: 5em;
+    height: 3em;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+header ul a {
+    text-decoration: none;
+    color: #999;
+}
+/* End */
+
+/* Start */
+main {
+    display: grid;
+    grid-template-columns: auto-fill(5, minmax(17em, 1fr));
+    grid-template-rows: 2;
+    gap: 2em;
+    margin: 2em 0;
+}
+main section {
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+}
+main section img {
+    width: 100%;
+    object-fit: cover;
+}
+main h1 {
+    font-size: 3em;
+    max-inline-size: 10ch;
+}
+main section figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+main section figcaption p {
+    max-inline-size: 40ch;
+}
+main section figcaption a {
+    margin-top: 2em;
+}
+/* End */
+
+/* Start */
+aside {
+    grid-column: 5 / 6;
+    grid-row: 1 / 3;
+    background-color: hsl(240, 100%, 5%);
+    color: #fff;
+    padding: 1em;
+}
+aside h2 {
+    color: hsl(35, 77%, 62%);
+}
+aside ul {
+    height: calc(100% - 2em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+aside li {
+    flex-grow: 1;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1em;
+}
+aside li:last-of-type {
+    border: none;
+}
+aside h3 {
+    margin: 1em 0;
+}
+aside p {
+    opacity: 0.7;
+}
+/* End */
+
+/* Start */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+}
+nav figure {
+    width: calc((100% / 3) - 4em);
+    display: flex;
+    gap: 1em;
+}
+nav figure .num {
+    font-size: 2em;
+    color: #999;
+}
+nav h4 {
+    margin: 1em 0;
+}
+nav img {
+    width: 7em;
+    height: 10em;
+    object-fit: cover;
+}
+nav p {
+    max-inline-size: 35ch;
+    color: hsl(240, 100%, 5%);
+}
+@media (max-width: 1100px) {
+    section {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    aside {
+        grid-column: 1 / 5;
+        grid-row: auto;
+    }
+    nav figure {
+        width: calc((100% / 2) - 2em);
+    }
+}
+@media (max-width: 1000px) {
+    nav figure {
+        width: 100%;
+    }
+}
